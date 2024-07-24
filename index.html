@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smoothie Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Smoothie Shop</h1>
+  <h3>Customize your smoothie below!</h3>
+  <form id="order-form">
+    <label for="flavor-select">Flavor</label>
+    <select name="flavor" id="flavor-select">
+      <option value="strawberry">Strawberry</option>
+      <option value="banana">Banana</option>
+      <option value="mango">Mango</option>
+    </select>
+
+    <label for="milk-select">Milk</label>
+    <select name="milk" id="milk-select">
+      <option value="whole">Whole</option>
+      <option value="skim">Skim</option>
+      <option value="almond">Almond</option>
+    </select>
+
+    <label for="extras-select">Extras</label>
+    <select name="extras" id="extras-select">
+      <option value="almonds">Almonds</option>
+      <option value="sprinkles">Sprinkles</option>
+    </select>
+
+    <fieldset>
+      <legend>Do you want protein?</legend>
+    
+      <div>
+        <input type="radio" id="yes-input" name="protein" value="yes" />
+        <label for="yes-input">Yes</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="no-input" name="protein" value="no" />
+        <label for="no-input">No</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Size</legend>
+    
+      <div>
+        <input type="radio" id="small-input" name="size" value="small" />
+        <label for="small-input">S</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="medium-input" name="size" value="medium" />
+        <label for="medium-input">M</label>
+      </div>
+
+      <div>
+        <input type="radio" id="large-input" name="size" value="large" />
+        <label for="large-input">L</label>
+      </div>
+    </fieldset>
+
+    <label for="quantity-input">Quantity:</label>
+    <input type="number" id="quantity-input" name="quantity" min="1" max="100" value="1"/>
+    
+    <br>
+
+    <input type="submit" id="order-btn" value="Order!" />
+  </form>
+
+  <section>
+    <h3>Orders in process</h3>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Order#</th>
+          <th scope="col">Content</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody id="orders-table-body">
+      </tbody>
+    </table>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
